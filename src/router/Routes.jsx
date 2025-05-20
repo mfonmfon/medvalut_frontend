@@ -5,6 +5,7 @@ import PatientSignupScreen from "../auth/PatientSignupScreen/PatientSignupScreen
 import UserTypeOnboardingCard from "../auth/userTypeOnboardCard/UserTypeOnboardingCard";
 import CreatePatientMedicalRecord from "../components/dashboard/doctordashboard/createpatientrecord/CreatePatientMedicalRecord";
 import DoctorDashboard from "../components/dashboard/doctordashboard/DoctorDashboard";
+import RequestAccess from "../components/dashboard/doctordashboard/requestaccess/RequestAccess";
 import ViewRecords from "../components/dashboard/doctordashboard/viewrecords/ViewRecords";
 import MedValutAiDoctor from "../components/dashboard/medvalutaidoctor/MedValutAiDoctor";
 import BookAppointment from "../components/dashboard/patientdashboard/bookappointment/BookAppointment";
@@ -54,6 +55,10 @@ const HEALTH_RECORD_ROUTES = [
   {
     path: '/doctor/viewrecord',
     element: <ViewRecords/>
+  },
+  {
+    path: "/doctor/requestrecordaccess",
+    element: <RequestAccess/>
   },
   {
     path: "/doctor/createmedicalrecord",
