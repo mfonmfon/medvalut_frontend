@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
-
+import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+import { Home } from "lucide-react";
 const navLinks = [
-  { label: 'Products', href: '/products' },
-  { label: 'About', href: '/about' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Career', href: '/career' },
+  { label: "Products", href: "/products" },
+  { label: "About", href: "/about" },
+  { label: "Blog", href: "/blog" },
+  { label: "Career", href: "/career" },
 ];
 
 const HealthRecordHeader = () => {
@@ -15,19 +15,30 @@ const HealthRecordHeader = () => {
   return (
     <header className="w-full sticky top-0 bg-[#08123B] text-white shadow-md z-50">
       <div className="flex justify-between items-center px-6 md:px-16 py-3">
-        <h1 className="text-2xl font-bold tracking-wide text-white">HealthValut</h1>
-
+        <div className="flex justtify-between gap-1 items-center">
+          <Home fill="blue" size={40} />
+          <h1 className="text-2xl font-bold tracking-wide text-white">
+            MedVault
+          </h1>
+        </div>
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex space-x-6 text-sm font-medium">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.href} className="hover:text-blue-300 transition">
+              <a
+                key={link.label}
+                href={link.href}
+                className="hover:text-blue-300 transition"
+              >
                 {link.label}
               </a>
             ))}
           </nav>
           <div className="flex space-x-4 ml-8">
-            <a href="/login" className="px-5 py-2 hover:text-blue-300 transition font-medium">
+            <a
+              href="/login"
+              className="px-5 py-2 hover:text-blue-300 transition font-medium"
+            >
               Login
             </a>
             <a
@@ -52,7 +63,7 @@ const HealthRecordHeader = () => {
       {/* Slide-in Mobile Navigation */}
       <div
         className={`fixed top-0 left-0 h-full w-3/4 max-w-xs bg-[#08123B] text-white z-40 transform transition-transform duration-300 ease-in-out ${
-          menuOpen ? 'translate-x-0' : '-translate-x-full'
+          menuOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
         <div className="px-6 py-6 flex flex-col space-y-6">
