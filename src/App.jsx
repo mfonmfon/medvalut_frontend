@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import HEALTH_RECORD_ROUTES from "./router/Routes"
-
+import HealthRecordHeader from "./components/healthRecordHeader/HealthRecordHeader"
 
 function App() {
 
@@ -9,6 +9,7 @@ function App() {
   ])
   return (
     <>
+    <HealthRecordHeader />
     <RouterProvider router={router} />
    
       
